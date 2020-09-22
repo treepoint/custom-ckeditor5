@@ -25,6 +25,7 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
@@ -55,6 +56,7 @@ ClassicEditor.builtinPlugins = [
 	Indent,
 	Link,
 	List,
+	TodoList,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
@@ -88,6 +90,7 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bulletedList',
 			'numberedList',
+			'todoList',
 			'blockQuote',
 			'link'
 		]
