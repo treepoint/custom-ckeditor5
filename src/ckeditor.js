@@ -31,8 +31,10 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -60,7 +62,9 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	Underline,
-	Strikethrough
+	Strikethrough,
+	FontColor,
+	FontBackgroundColor
 ];
 
 // Editor configuration.
@@ -76,6 +80,8 @@ ClassicEditor.defaultConfig = {
 			'italic',
 			'underline',
 			'strikethrough',
+			'fontColor',
+			'fontBackgroundColor',
 			'|',
 			'indent',
 			'outdent',
@@ -95,7 +101,7 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	table: {
-		contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
+		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells']
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'ru'
